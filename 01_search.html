@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="26_icon.png">
+    <title>Oshikatsu Goods Searcher</title>
+    <link rel="stylesheet" href="41_seach.css">
+</head>
+<nav>
+    <div id="header">
+         <div class = resizeimage >
+            <a href="00_top.html"><img src="22_無題120_20241224150342.png"></a>
+        </div>
+    </div>
+</br>
+    <ul>
+        <li><a href="00_top.html">TOP</a></li>
+        <li><a href="01_search.html">検索</a></li>
+        <li><a href="02_information.html">受賞歴</a></li>
+        <li><a href="03_contact.html">お問い合わせ</a></li>
+        <img src="Language.png"width="22" height="22">
+        <form name="formlink">
+            <select name="selectlink" class="selectlink" onchange="if(document.formlink.selectlink.value){location.href=document.formlink.selectlink.value;}">
+                <option value="01_search.html">日本語</option>
+                <option value="05_01_ENsearch.html">English</option>
+                <option value="06_01_CHsearch.html">中文</option>
+                <option value="07_01_KRsearch.html">한국어</option>
+            </select>
+        </form>
+    </ul>
+</nav>
+</br></br></br>
+<center>
+    <h1>
+        <font color=" #a39ce7"><b>グッズ検索</b></font>
+        </b>
+    </h1>
+    <br>
+</center>
+<body>
+    <center>
+        <input type="text" id="name" class="name" placeholder="推しの名前"><br><br>
+        <input type="number" id="budget" class="yosan" min="0" placeholder="予算(円)"><br><br>
+        <input type="number" id="quantity" class="kosu" min="0" placeholder="個数"><br><br>
+        <input type="text" id="type" class="shurui" placeholder="グッズの種類" value = "グッズ"><br><br>
+    </center>
+    <div class="modal-wata__wrap">
+        <input type="radio" id="modal-wata__open" class="modal-wata__open-input" name="modal-wata__trigger"/>
+        <label for="modal-wata__open" class="modal-wata__open-label">?</label>
+        <input type="radio" id="modal-wata__close" name="modal-wata__trigger"/>
+        <div class="modal-wata">
+            <div class="modal-wata__content-wrap">
+                <label for="modal-wata__close" class="modal-wata__close-label">×</label>
+                <div class="modal-wata__content">
+                    <font color=#696969>＜使い方＞</font><br><br>
+                    <font color=#696969>
+                        ①グッズを検索したい推しの名前を入力<br>（所属場所を名前の前に入れてもいい）<br><br>
+                        ②予算を入力<br><br>
+                        ③グッズの個数を入力（指定しない場合は未入力）<br><br>
+                        ④欲しいグッズの種類を入力(指定しない場合は「グッズ」と入力)<br><br>
+                    </font>
+                    <center>
+                        <img class="img-pc" src="21_tukaikata.png" width="70%" height="70%">
+                        <img class="img-sp" src="21_01_sptukaikata.png" width="100%" height="100%">
+                    </center>
+                </div>
+            </div>
+            <label for="modal-wata__close">
+                <div class="modal-wata__background"></div>
+            </label>
+        </div>
+    </div>
+
+    <center>
+        <button class=search_botton onclick="sendMessage()">検索</button><br><br>
+        <pre class="response" id="response"></pre>
+        <script src="10_app.js"></script>
+    </center>
+</body>
+</html>
