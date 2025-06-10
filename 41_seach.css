@@ -1,0 +1,441 @@
+    /*ナビゲーションバー*/
+        ul{
+            display: flex;  /*横並び*/
+        }
+        li{
+            list-style: none;  /*マーカーを消す（用途不明）*/
+        }
+        a{
+            display: block;  /*文字全体をブロックとして認識*/
+            text-decoration: none;  /*下線を消す*/
+            color: #ffffff;
+            margin-right: 35px;  /*文字間に35px*/
+        }
+        a:hover{
+            color: #898989;
+        }
+        select{
+            color: #ffffff;
+            background-color: #696969;
+            border:none;
+            font-size:15px
+        }
+        .selectlink:hover{
+            color: #898989;
+        }
+        option{
+            color:#ffffff;
+        }
+        nav{
+            box-sizing: border-box;
+            position: fixed;  /*バーを上部に固定*/
+            padding-top: 5px;  /*パンティング5px（要素が下になる）*/
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #696969;
+        }
+        .resizeimage img{  /*縦横比を維持したまま拡大*/
+            height: 75px;
+            float: left;
+        }
+    /*題名*/
+        h1{
+            font-size: 50px;
+            color: #696969
+        }
+        body{
+            background-image: url('24_background.png');
+            background-size: 500%;
+            background-position: center;  /* 画像を中央に配置 */
+        }
+    /*ボタン*/
+        .search_botton{
+            display: inline-block;  /*テキストと同じように使用できる*/
+            text-decoration: none;
+            padding: 10px 10px;
+            font-size: 2em;
+            border-radius: 70px;  /*角の丸み*/
+            border: solid 4px #be9acd;  /*枠線の太さ*/
+            color: #d4a8e7;
+            transition: .4s;  /*実行にかかる時間*/
+        }
+        .search_botton:hover{
+            background: #be9acd;
+            color: #ffffff;
+        }
+        #budget::-webkit-outer-spin-button, 
+        #budget::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 0;
+        }
+        #budget{
+            -appearance:textfield;
+        }
+        #budget{
+            -moz-appearance: textfield; /* Firefox */
+            appearance: textfield;
+        }
+        .name{
+            border: none;  /* 枠線無し*/
+            width: 600px;
+            padding: 10px 10px;
+            border-radius: 70px;  /*角*/
+            font-size: 2em;
+            line-height: 1.5;  /* 行間1.5倍 */
+            background: #f8d6f0;
+            color: #ffffff;
+        }
+        .name::placeholder{
+            color: #ffffff;
+        }
+        .yosan{
+            border: none;
+            width: 600px;
+            padding: 10px 10px;
+            border-radius: 70px; 
+            font-size: 2em;
+            line-height: 1.5;
+            background: #bbd2ee; 
+            color: #ffffff; 
+        }
+        .yosan::placeholder{
+            color: #ffffff;
+        }
+        .kosu{
+            border: none;  /* 枠線無し*/
+            width: 600px;
+            padding: 10px 10px;
+            border-radius: 70px;  /*角*/
+            font-size: 2em;
+            line-height: 1.5;  /* 行間1.5倍 */
+            background: #c3ecea;
+            color: #ffffff;
+        }
+        .kosu::placeholder{
+            color: #ffffff;
+        }
+        
+
+        .shurui{
+            border: none;  /* 枠線無し*/
+            width: 600px;
+            padding: 10px 10px;
+            border-radius: 70px;  /*角*/
+            font-size: 2em;
+            line-height: 1.5;  /* 行間1.5倍 */
+            background: #e2d0f3;
+            color: #ffffff;
+        }
+        .shurui::placeholder{
+            color: #ffffff;
+        }
+    /*モーダル*/
+        .modal-wata__wrap input{  /*モーダル表示*//*ちょとよくわからない*/
+            display: none;
+        }
+        .modal-wata__open-label,.modal-wata__close-label{  /*カーソルがポインタになる*/
+            cursor: pointer;
+        }
+        .modal-wata__open-label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin:0 auto;
+            border-radius: 50px;
+            border: 2px solid #ffffff;
+            background-color: #ffc0cd;
+            color: #ffffff;
+            font-weight: 10;
+            font-size: 1em;
+            position: relative; top: 10px; right: 300px;
+        }
+        .modal-wata__open-label:hover{
+            background-color: #ffffff;
+            color: #9d9d9d;
+            outline: 1px solid #9d9d9d;
+        }
+        .modal-wata{
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+        }
+        .modal-wata__open-input:checked + label + input + .modal-wata{
+            display: block;
+            animation: modal-wata-animation .6s;
+        }
+        .modal-wata__content-wrap{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%; /* Change the width for PC */
+            max-width: 650px;
+            background-color: #ffffff;
+            z-index: 2;
+            border-radius: 5px;
+        }
+        .modal-wata__close-label{
+            background-color: #777777;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 20px;
+            width: 36px;
+            height: 36px;
+            line-height: 1.6;
+            text-align: center;
+            display: table-cell;
+            position: fixed;
+            top: -15px;
+            right: -2%;
+            z-index: 99999;
+            font-size: 1.3em;
+        }
+        .modal-wata__content{
+            max-height: 64vh; 
+            overflow-y: auto;
+            padding: 39px 20px 40px;
+        }
+        .modal-wata__background{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .45);
+            z-index: 1;
+        }
+        @keyframes modal-wata-animation{  /*フェードイン*/
+            0%{
+                opacity: 0;
+            }
+            1%{
+                opacity: 1;
+            }
+        } 
+        .img-sp {
+            display: none;
+        }
+        .response{
+            white-space: pre-wrap;
+            margin-top: 10px;
+            font-family: 'メイリオ', sans-serif;  /* フォントを指定 */
+            font-size: 22px;  /* フォントサイズを指定 */
+            color: #6d6d6d;
+        }
+     /* タブレットサイズ */
+    @media screen and (max-width: 768px) {
+    /*ナビゲーションバー*/
+        ul{
+            display: flex;  /*横並び*/
+            list-style: none;
+        }
+        ul::after{
+            clear: both;
+            content: "";
+            display: block;
+        }
+        li{
+            list-style: none;  /*マーカーを消す（用途不明）*/
+            white-space: nowrap;
+        }
+        a{
+            display: block;  /*文字全体をブロックとして認識*/
+            text-decoration: none;  /*下線を消す*/
+            color: #ffffff;
+        }
+        a:hover{
+            color: #898989;
+        }
+        last-child a{
+            border-right: 1px solid #ccc;
+        }
+        .resizeimage img{  /*縦横比を維持したまま拡大*/
+            height: 75px;
+            float: left;
+        }
+        nav{
+            overflow-x: auto;
+            overflow-y: hidden;
+            box-sizing: border-box;
+            position: fixed;  /*バーを上部に固定*/
+            width: 100%;
+            height: 70px;
+            background-color: #696969;
+        }
+    /*題名*/
+        h1{
+        font-size: 40px;
+        }
+    /*ボタン*/
+        .search_botton {
+            display: inline-block; /*テキストと同じように使用できる*/
+            padding: 10px 10px;
+            font-size: 1.5em;
+            text-decoration: none;
+            color: #be9acd;
+            border: solid 4px #be9acd;/*枠線の太さ*/
+            border-radius: 70px; /*角の丸み*/
+            transition: .4s;/*実行にかかる時間*/
+        }
+        .name {
+            width: 440px; /* 幅100%*/
+            padding: 10px 10px; /* 上下8px、左右10pxの内側の余白*/
+            border: none; /* 枠線無し*/
+            border-radius: 70px; 
+            background: #f4c5ea; 
+            color: #ffffff; 
+            font-size: 2em; /* フォントサイズ*/
+            line-height: 1.5; /* 行間1.5倍 */
+        }
+            .yosan {
+            width: 440px; /* 幅100%*/
+            padding: 10px 10px; /* 上下8px、左右10pxの内側の余白*/
+            border: none; /* 枠線無し*/
+            border-radius: 70px; 
+            background: #adcff5; 
+            color: #ffffff; 
+            font-size: 2em; /* フォントサイズ*/
+            line-height: 1.5; /* 行間1.5倍 */
+        }
+        .kosu{
+            border: none;  /* 枠線無し*/
+            width: 440px;
+            padding: 10px 10px;
+            border-radius: 70px;  /*角*/
+            font-size: 2em;
+            line-height: 1.5;  /* 行間1.5倍 */
+            background: #c3ecea;
+            color: #ffffff;
+        }
+        .shurui{
+            border: none;  /* 枠線無し*/
+            width: 440px;
+            padding: 10px 10px;
+            border-radius: 70px;  /*角*/
+            font-size: 2em;
+            line-height: 1.5;  /* 行間1.5倍 */
+            background: #e2d0f3;
+            color: #ffffff;
+        }
+    /*モーダル*/
+        .modal-wata__open-label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 36px;
+            height: 36px;
+            margin:0 auto;
+            border-radius: 50px;
+            border: 2px solid #ffffff;
+            background-color: #ffc0cd;
+            color: #ffffff;
+            font-weight: 10;
+            font-size: 1em;
+            position: relative; top: 0px; right: 225px;
+        }
+        .response{
+            white-space: pre-wrap;
+            margin-top: 10px;
+            font-family: 'メイリオ', sans-serif;  /* フォントを指定 */
+            font-size: 20px;  /* フォントサイズを指定 */
+            color: #6d6d6d;
+
+        }
+    }
+    /* スマホサイズ */
+        @media screen and (max-width: 480px) {
+        h1{
+            font-size: 30px;
+        }
+    /*ボタン*/
+        .search_botton {
+            display: inline-block; /*テキストと同じように使用できる*/
+            padding: 8px 8px;
+            font-size: 1em;
+            text-decoration: none;
+            color: #be9acd;
+            border: solid 3px #be9acd;/*枠線の太さ*/
+            border-radius: 70px; /*角の丸み*/
+            transition: .4s;/*実行にかかる時間*/
+        }
+        .name {
+            width: 300px; /* 幅100%*/
+            padding: 10px 10px; /* 上下8px、左右10pxの内側の余白*/
+            border: none; /* 枠線無し*/
+            border-radius: 50px; 
+            background: #f4c5ea; 
+            color: #ffffff; 
+            font-size: 1.5em; /* フォントサイズ*/
+            line-height: 1.25; /* 行間1.5倍 */
+        }
+            .yosan {
+            width: 300px; /* 幅100%*/
+            padding: 10px 10px; /* 上下8px、左右10pxの内側の余白*/
+            border: none; /* 枠線無し*/
+            border-radius: 50px; 
+            background: #adcff5; 
+            color: #ffffff; 
+            font-size: 1.5em; /* フォントサイズ*/
+            line-height: 1.25; /* 行間1.5倍 */
+        }
+        .kosu{
+            border: none;  /* 枠線無し*/
+            width: 300px;
+            padding: 10px 10px;
+            border-radius: 50px;  /*角*/
+            font-size: 1.5em;
+            line-height: 1.25;  /* 行間1.5倍 */
+            background: #c3ecea;
+            color: #ffffff;
+        }
+        .shurui{
+            border: none;  /* 枠線無し*/
+            width: 300px;
+            padding: 10px 10px;
+            border-radius: 50px;  /*角*/
+            font-size: 1.5em;
+            line-height: 1.25;  /* 行間1.5倍 */
+            background: #e2d0f3;
+            color: #ffffff;
+        }
+    /*モーダル*/
+        .modal-wata__open-label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            margin:0 auto;
+            border-radius: 50px;
+            border: 2px solid #ffffff;
+            background-color: #ffc0cd;
+            color: #ffffff;
+            font-weight: 10;
+            font-size: 0.85em;
+            position: relative; top: 0px; right: 145px;
+        }
+        .img-pc {
+            display: none;
+        }
+
+        .img-sp {
+            display: block;
+        }
+        .response{
+            white-space: pre-wrap;
+            margin-top: 10px;
+            font-family: 'メイリオ', sans-serif;  /* フォントを指定 */
+            font-size: 18px;  /* フォントサイズを指定 */
+            color: #6d6d6d;
+
+        }
+    }
