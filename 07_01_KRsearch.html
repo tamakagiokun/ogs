@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="26_icon.png">
+    <title>Oshikatsu Goods Searcher</title>
+    <link rel="stylesheet" href="41_seach.css">
+</head>
+<nav>
+    <div id="header">
+        <center>  <div class = resizeimage >
+            <a href="07_00_KRtop.html"><img src="22_無題120_20241224150342.png"></a>
+        </div></center>
+    </div>
+</br>
+    <ul>
+        <li><a href="07_00_KRtop.html">TOP</a></li>
+        <li><a href="07_01_KRsearch.html">검색하기</a></li>
+        <li><a href="07_02_KRinformation.html">수상경력</a></li>
+        <li><a href="07_03_KRcontact.html">문의하기</a></li>
+        <img src="Language.png"width="22" height="22">
+        <form name="formlink">
+            <select name="selectlink" class="selectlink" onchange="if(document.formlink.selectlink.value){location.href=document.formlink.selectlink.value;}">
+                <option value="01_search.html">日本語</option>
+                <option value="05_01_ENsearch.html">English</option>
+                <option value="06_01_CHsearch.html">中文</option>
+                <option value="07_01_KRsearch.html" selected>한국어</option>
+            </select>
+        </form>
+    </ul>
+</nav>
+</br></br></br>
+<center>
+    <h1>
+        <font color=" #a39ce7"><b>상품 검색</b></font>
+        </b>
+    </h1>
+    <br>
+</center>
+<body>
+    <center>
+        <input type="text" id="name" class="name" placeholder="최애 이름"><br><br>
+        <input type="number" id="budget" class="yosan" min="0" placeholder="예산(원)"><br><br>
+        <input type="number" id="quantity" class="kosu" min="0" placeholder="개수"><br><br>
+        <input type="text" id="type" class="shurui" placeholder="상품 종류" value = "상품"><br><br>
+    </center>
+    <div class="modal-wata__wrap">
+        <input type="radio" id="modal-wata__open" class="modal-wata__open-input" name="modal-wata__trigger"/>
+        <label for="modal-wata__open" class="modal-wata__open-label">?</label>
+        <input type="radio" id="modal-wata__close" name="modal-wata__trigger"/>
+        <div class="modal-wata">
+            <div class="modal-wata__content-wrap">
+                <label for="modal-wata__close" class="modal-wata__close-label">×</label>
+                <div class="modal-wata__content">
+                    <font color=#696969>＜이용방법＞</font><br><br>
+                    <font color=#696969>
+                        ①상품을 검색하고 싶은 캐릭터의 이름을 입력하세요.<br>（이름 앞에 소속을 붙일 수 있음）<br><br>
+                        ②예산 입력하기<br><br>
+                        ③상품 수량 입력（지정하지 않으면 미입력）<br><br>
+                        ④원하는 상품 종류를 입력해 주세요(지정하지 않을 경우 '상품'으로 입력)<br><br>
+                    </font>
+                    <center>
+                        <img class="img-pc" src="29_KRtukaikata.png" width="70%" height="70%">
+                        <img class="img-sp" src="29_01_spKR.png" width="100%" height="100%">
+                    </center>
+                </div>
+            </div>
+            <label for="modal-wata__close">
+                <div class="modal-wata__background"></div>
+            </label>
+        </div>
+    </div>
+
+    <center>
+        <button class=search_botton onclick="sendMessage()">검색</button><br><br>
+        <pre class="response" id="response"></pre>
+        <script src="13_KRapp.js"></script>
+    </center>
+</body>
+</html>

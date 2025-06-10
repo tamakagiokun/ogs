@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="26_icon.png">
+    <title>Oshikatsu Goods Searcher</title>
+    <link rel="stylesheet" href="41_seach.css">
+</head>
+<nav>
+    <div id="header">
+        <center>  <div class = resizeimage >
+            <a href="06_00_CHtop.html"><img src="22_無題120_20241224150342.png"></a>
+        </div></center>
+    </div>
+</br>
+    <ul>
+        <li><a href="06_00_CHtop.html">TOP</a></li>
+        <li><a href="06_01_CHsearch.html">搜索</a></li>
+        <li><a href="06_02_CHinformation.html">获奖情况</a></li>
+        <li><a href="06_03_CHcontact.html">询问</a></li>
+        <img src="Language.png"width="22" height="22">
+        <form name="formlink">
+            <select name="selectlink" class="selectlink" onchange="if(document.formlink.selectlink.value){location.href=document.formlink.selectlink.value;}">
+                <option value="01_search.html">日本語</option>
+                <option value="05_01_ENsearch.html">English</option>
+                <option value="06_01_CHsearch.html" selected>中文</option>
+                <option value="07_01_KRsearch.html">한국어</option>
+            </select>
+        </form>
+    </ul>
+</nav>
+</br></br></br>
+<center>
+    <h1>
+        <font color=" #a39ce7"><b>货物搜索</b></font>
+        </b>
+    </h1>
+    <br>
+</center>
+<body>
+    <center>
+        <input type="text" id="name" class="name" placeholder="我推名称"><br><br>
+        <input type="number" id="budget" class="yosan" min="0" placeholder="预算(元)"><br><br>
+        <input type="number" id="quantity" class="kosu" min="0" placeholder="数量"><br><br>
+        <input type="text" id="type" class="shurui" placeholder="货物类型" value = "货"><br><br>
+    </center>
+    <div class="modal-wata__wrap">
+        <input type="radio" id="modal-wata__open" class="modal-wata__open-input" name="modal-wata__trigger"/>
+        <label for="modal-wata__open" class="modal-wata__open-label">?</label>
+        <input type="radio" id="modal-wata__close" name="modal-wata__trigger"/>
+        <div class="modal-wata">
+            <div class="modal-wata__content-wrap">
+                <label for="modal-wata__close" class="modal-wata__close-label">×</label>
+                <div class="modal-wata__content">
+                    <font color=#696969>＜如何使用＞</font><br><br>
+                    <font color=#696969>
+                        ①输入要搜索货物的我推的名称。<br>（您可以在姓名前加上所属单位。）<br><br>
+                        ②输入预算。<br><br>
+                        ③输入货物数量。（如未指明，则不输入）<br><br>
+                        ④输入您想要的货物类型。(如果未指定，则输入 "货"。)<br><br>
+                    </font>
+                    <center>
+                        <img class="img-pc" src="28_CHtukaikata.png" width="70%" height="70%">
+                        <img class="img-sp" src="28_01_spCH.png" width="100%" height="100%">
+                    </center>
+                </div>
+            </div>
+            <label for="modal-wata__close">
+                <div class="modal-wata__background"></div>
+            </label>
+        </div>
+    </div>
+
+    <center>
+        <button class=search_botton onclick="sendMessage()">搜索</button><br><br>
+        <pre class="response" id="response"></pre>
+        <script src="12_CHapp.js"></script>
+    </center>
+</body>
+</html>

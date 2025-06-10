@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="26_icon.png">
+    <title>Oshikatsu Goods Searcher</title>
+    <link rel="stylesheet" href="44_collection.css">
+</head>
+<nav>
+    <div id="header">
+        <center>  <div class = resizeimage >
+            <a href="00_top.html"><img src="22_無題120_20241224150342.png"></a>
+        </div></center>
+    </div>
+</br>
+    <ul>
+        <li><a href="00_top.html">TOP</a></li>
+        <li><a href="01_search.html">検索</a></li>
+        <li><a href="02_information.html">受賞歴</a></li>
+        <li><a href="03_contact.html">お問い合わせ</a></li>
+        <li><a href="04_collection.html">コレクション</a></li>
+        <img src="Language.png"width="22" height="22">
+        <form name="formlink">
+        <select name="selectlink" class="selectlink" onchange="if(document.formlink.selectlink.value){location.href=document.formlink.selectlink.value;}">
+            <option value="00_top.html">日本語</option>
+            <option value="05_00_ENtop.html">English</option>
+            <option value="06_00_CHtop.html">中文</option>
+            <option value="07_00_KRtop.html">한국어</option>
+        </select>
+    </form>
+    </ul>
+</nav>
+<br><br><br>
+
+<body>
+    <center>
+        <h2>コレクション</h2>
+    <p>グッズの購入履歴を保存することができます</p>
+    
+    <form id="itemForm">
+        <input type="text" id="itemName" placeholder="グッズ名" required>
+        <input type="number" id="itemPrice" placeholder="金額 (円)" required>
+        <button type="submit" button class="submitbutton">追加</button>
+    </form>
+
+    <h3>購入リスト</h3>
+    <ul id="itemList"></ul>
+
+    <p id="totalMonth">今月の合計: 0円</p>
+    <p id="totalYear">今年の合計: 0円</p>
+    <p id="totalAll">全期間の合計: 0円</p>
+
+    <br><br><br><br>
+    <p>このページではローカルストレージを使用しています。</p>
+
+    <script src="10_collection.js"></script>
+    </center>
+</body>
+</html>
+
+</html>
